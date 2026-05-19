@@ -1,0 +1,12 @@
+# Godot-specific overrides
+.godot/
+*.translation
+
+# Mono-specific overrides
+.mono/
+data_*/
+mono_crash_*.json
+
+# System/Editor overrides
+.import/
+export_presets.cfg
