@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Particules"
-run/main_scene="uid://b4dc36s5bcabp"
+run/main_scene="uid://bmm6n6kg7wqxa"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

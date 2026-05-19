@@ -1,9 +1,42 @@
 [gd_scene format=3 uid="uid://bmm6n6kg7wqxa"]
 
+[ext_resource type="Script" uid="uid://baeybw8pmxokt" path="res://node_2d.gd" id="1_epypp"]
 [ext_resource type="PackedScene" uid="uid://b4dc36s5bcabp" path="res://witch.tscn" id="1_wtcfe"]
 [ext_resource type="PackedScene" uid="uid://bq6w7d5guoexv" path="res://cauldron.tscn" id="2_0e48y"]
 
+[sub_resource type="Curve" id="Curve_0e48y"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_epypp"]
+curve = SubResource("Curve_0e48y")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0e48y"]
+lifetime_randomness = 0.5
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 0.0
+emission_ring_radius = 0.0
+emission_ring_inner_radius = 1000.0
+emission_ring_cone_angle = 90.0
+direction = Vector3(0, -1, 0)
+initial_velocity_min = 20.0
+initial_velocity_max = 50.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = -1.6093254e-05
+orbit_velocity_min = 9.49949e-08
+orbit_velocity_max = 9.49949e-08
+radial_velocity_min = -2.2351742e-05
+radial_velocity_max = -2.2351742e-05
+gravity = Vector3(0, -90, 0)
+scale_min = 0.0
+scale_max = 6.0
+scale_curve = SubResource("CurveTexture_epypp")
+color = Color(0, 1, 0, 1)
+
 [node name="Node2D" type="Node2D" unique_id=937775128]
+script = ExtResource("1_epypp")
 
 [node name="CharacterBody2D" parent="." unique_id=1659612149 instance=ExtResource("1_wtcfe")]
 position = Vector2(88, -128)
@@ -14,3 +47,31 @@ position = Vector2(238, -117)
 [node name="Sprite2D" parent="." unique_id=1233022636 instance=ExtResource("2_0e48y")]
 position = Vector2(273, -73.00001)
 scale = Vector2(0.03925782, 0.03841798)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Sprite2D" unique_id=1023940646]
+position = Vector2(-101.89048, -1952.2108)
+amount = 75
+amount_ratio = 0.3
+process_material = SubResource("ParticleProcessMaterial_0e48y")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=763419492]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1275792809]
+anchors_preset = -1
+anchor_left = 0.057000004
+anchor_top = -0.50200003
+anchor_right = 0.41400003
+anchor_bottom = -0.38900003
+grow_horizontal = 2
+
+[node name="BtnRojo" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=644561118]
+layout_mode = 2
+text = "Burbujas Rojas!"
+
+[node name="BtnAzul" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1100667233]
+layout_mode = 2
+text = "Burbujas Azules!"
+
+[node name="BtnVerde" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=139018068]
+layout_mode = 2
+text = "Burbujas Verdes!"

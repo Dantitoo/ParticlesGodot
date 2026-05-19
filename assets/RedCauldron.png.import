@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm5hrrwte0f1h"
-path="res://.godot/imported/Dash3_00010.png-eaa53a50f459c78329bbb79d8fbe4728.ctex"
+uid="uid://dmy5tk70ivl6d"
+path="res://.godot/imported/RedCauldron.png-659318171b3ac3090997d43c606c74bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BlueWizard/2BlueWizardJump/Dash3/Dash3_00010.png"
-dest_files=["res://.godot/imported/Dash3_00010.png-eaa53a50f459c78329bbb79d8fbe4728.ctex"]
+source_file="res://assets/RedCauldron.png"
+dest_files=["res://.godot/imported/RedCauldron.png-659318171b3ac3090997d43c606c74bb.ctex"]
 
 [params]
 
