@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://baeybw8pmxokt" path="res://node_2d.gd" id="1_epypp"]
 [ext_resource type="PackedScene" uid="uid://b4dc36s5bcabp" path="res://witch.tscn" id="1_wtcfe"]
-[ext_resource type="PackedScene" uid="uid://bq6w7d5guoexv" path="res://cauldron.tscn" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://b7jlkr2je30qi" path="res://cauldron.tscn" id="2_0e48y"]
 
 [sub_resource type="Curve" id="Curve_0e48y"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -44,25 +44,14 @@ position = Vector2(88, -128)
 [node name="Camera2D" type="Camera2D" parent="." unique_id=429933846]
 position = Vector2(238, -117)
 
-[node name="Sprite2D" parent="." unique_id=1233022636 instance=ExtResource("2_0e48y")]
-position = Vector2(273, -73.00001)
-scale = Vector2(0.03925782, 0.03841798)
-
-[node name="GPUParticles2D" type="GPUParticles2D" parent="Sprite2D" unique_id=1023940646]
-position = Vector2(-101.89048, -1952.2108)
-amount = 75
-amount_ratio = 0.3
-process_material = SubResource("ParticleProcessMaterial_0e48y")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=763419492]
+follow_viewport_enabled = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1275792809]
-anchors_preset = -1
-anchor_left = 0.057000004
-anchor_top = -0.50200003
-anchor_right = 0.41400003
-anchor_bottom = -0.38900003
-grow_horizontal = 2
+offset_top = -350.0
+offset_right = 481.0
+offset_bottom = -250.0
+alignment = 1
 
 [node name="BtnRojo" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=644561118]
 layout_mode = 2
@@ -75,3 +64,13 @@ text = "Burbujas Azules!"
 [node name="BtnVerde" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=139018068]
 layout_mode = 2
 text = "Burbujas Verdes!"
+
+[node name="Cauldron" parent="." unique_id=498590911 instance=ExtResource("2_0e48y")]
+position = Vector2(374, -86)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="Cauldron" unique_id=1023940646]
+position = Vector2(-6.0000005, -72)
+scale = Vector2(0.03925782, 0.03841798)
+amount = 75
+amount_ratio = 0.3
+process_material = SubResource("ParticleProcessMaterial_0e48y")

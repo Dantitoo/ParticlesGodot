@@ -1,8 +1,21 @@
-[gd_scene format=3 uid="uid://bq6w7d5guoexv"]
+[gd_scene format=3 uid="uid://b7jlkr2je30qi"]
 
-[ext_resource type="Texture2D" uid="uid://b3wesnb2cvk6p" path="res://assets/vecteezy_pixel-art-wizard-s-cauldron-with-magical-potion_72636707.png" id="1_5qdwy"]
+[ext_resource type="Texture2D" uid="uid://b3wesnb2cvk6p" path="res://assets/vecteezy_pixel-art-wizard-s-cauldron-with-magical-potion_72636707.png" id="1_s0ng3"]
+[ext_resource type="Texture2D" uid="uid://dmy5tk70ivl6d" path="res://assets/RedCauldron.png" id="2_0t22i"]
+[ext_resource type="Texture2D" uid="uid://bj3ap2i1537ea" path="res://assets/BlueCauldron.png" id="3_q3ljf"]
 
-[node name="Sprite2D" type="Sprite2D" unique_id=1233022636]
-position = Vector2(1622.9998, -418.00024)
-scale = Vector2(0.2271875, 0.21140625)
-texture = ExtResource("1_5qdwy")
+[node name="Cauldron" type="Node2D" unique_id=498590911]
+
+[node name="calderonVerde" type="Sprite2D" parent="." unique_id=640295001]
+scale = Vector2(0.048315432, 0.04700806)
+texture = ExtResource("1_s0ng3")
+
+[node name="calderonRojo" type="Sprite2D" parent="." unique_id=96520229]
+visible = false
+scale = Vector2(0.72204643, 0.7283333)
+texture = ExtResource("2_0t22i")
+
+[node name="calderonAzul" type="Sprite2D" parent="." unique_id=385674789]
+visible = false
+scale = Vector2(0.6708333, 0.6656037)
+texture = ExtResource("3_q3ljf")
