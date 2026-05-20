@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuqom8porjw7u"
-path="res://.godot/imported/CharaWizardJump_00006.png-1cd7e130150d16cba9ee027e4a28cfba.ctex"
+uid="uid://no58erohmstk"
+path="res://.godot/imported/GreenCauldron.png-ad53d3fc7d7a81421913a667d065cc93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/BlueWizard/2BlueWizardJump/CharaWizardJump_00006.png"
-dest_files=["res://.godot/imported/CharaWizardJump_00006.png-1cd7e130150d16cba9ee027e4a28cfba.ctex"]
+source_file="res://assets/GreenCauldron.png"
+dest_files=["res://.godot/imported/GreenCauldron.png-ad53d3fc7d7a81421913a667d065cc93.ctex"]
 
 [params]
 
