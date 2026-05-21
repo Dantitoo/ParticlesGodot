@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://0argnbgrtq07" path="res://assets/spritesheet.png" id="1_lf1iu"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_lf1iu"]
+radius = 46.52956
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_08n5d"]
 atlas = ExtResource("1_lf1iu")
 region = Rect2(0, 0, 512, 512)
@@ -57,12 +60,12 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lf1iu"]
-radius = 46.52956
-
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1659612149]
-position = Vector2(143, -133)
-platform_floor_layers = 4294967041
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1041581443]
+position = Vector2(-7, 47)
+scale = Vector2(0.9999999, 1)
+shape = SubResource("CircleShape2D_lf1iu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1272190370]
 position = Vector2(-5.9999847, 16)
@@ -70,7 +73,3 @@ scale = Vector2(0.734375, 0.77734375)
 sprite_frames = SubResource("SpriteFrames_ldwts")
 autoplay = "default"
 frame_progress = 0.25122645
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1041581443]
-position = Vector2(-7, 47)
-shape = SubResource("CircleShape2D_lf1iu")

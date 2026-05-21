@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bmm6n6kg7wqxa"]
 
-[ext_resource type="Script" uid="uid://baeybw8pmxokt" path="res://node_2d.gd" id="1_epypp"]
-[ext_resource type="PackedScene" uid="uid://b4dc36s5bcabp" path="res://witch.tscn" id="1_wtcfe"]
-[ext_resource type="PackedScene" uid="uid://b7jlkr2je30qi" path="res://cauldron.tscn" id="2_0e48y"]
+[ext_resource type="Script" uid="uid://baeybw8pmxokt" path="res://node_2d.gd" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://b4dc36s5bcabp" path="res://witch.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://b7jlkr2je30qi" path="res://cauldron.tscn" id="3_lquwl"]
 
 [sub_resource type="Curve" id="Curve_0e48y"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
@@ -35,10 +35,10 @@ scale_max = 6.0
 scale_curve = SubResource("CurveTexture_epypp")
 color = Color(0, 1, 0, 1)
 
-[node name="Node2D" type="Node2D" unique_id=937775128]
-script = ExtResource("1_epypp")
+[node name="main" type="Node2D" unique_id=937775128]
+script = ExtResource("1_h2yge")
 
-[node name="CharacterBody2D" parent="." unique_id=1659612149 instance=ExtResource("1_wtcfe")]
+[node name="CharacterBody2D" parent="." unique_id=1659612149 instance=ExtResource("2_1bvp3")]
 position = Vector2(88, -128)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=429933846]
@@ -55,17 +55,17 @@ alignment = 1
 
 [node name="BtnRojo" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=644561118]
 layout_mode = 2
-text = "Burbujas Rojas!"
+text = "Poción de fuego!"
 
 [node name="BtnAzul" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1100667233]
 layout_mode = 2
-text = "Burbujas Azules!"
+text = "Poción de hielo!"
 
 [node name="BtnVerde" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=139018068]
 layout_mode = 2
-text = "Burbujas Verdes!"
+text = "Poción de ácido!"
 
-[node name="Cauldron" parent="." unique_id=498590911 instance=ExtResource("2_0e48y")]
+[node name="Cauldron" parent="." unique_id=498590911 instance=ExtResource("3_lquwl")]
 position = Vector2(374, -86)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="Cauldron" unique_id=1023940646]
